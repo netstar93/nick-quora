@@ -1,0 +1,66 @@
+<%  include partials/head.ejs %>
+
+<div class="container-full login">
+    <div class="center-page">
+        <div class="title">Quora</div>
+        <p class="subtitle">A way to share knowledge.</p>
+        <div class="form-content ">
+                       
+            <div class="intro">
+                <div id="social-login">
+                <div class="control">
+                    <button class="">Facebook</button>
+                </div>
+                <div class="control">
+                        <button class="">Gmail</button>
+                </div>
+                <button class="btn warning" id="signup">Sign Up using Email</button>     
+                <span class="message">
+                    By signing up you indicate that you have read and agree to Quora's 
+                </span>
+            </div>
+            <div class="form hide" id="registerEmail" >
+                    <form action="/register" class="form-control">
+                        <div class="form-group">
+                                <label for="username">Name</label>
+                                <input type="text" name = 'name' class="form-control" />
+                            </div>
+
+                        <div class="form-group">
+                            <label for="username">Email</label>
+                            <input type="text" name = 'email' class="form-control" />
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="username">Password</label>
+                            <input type="text" name = 'password' class="form-control" />
+                        </div>             
+                        <div class="action">  
+                            <button class="btn success">Submit</button> 
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+
+            <div class="form">
+                    <form action="/login" class="form-control">
+                        <div class="form-group">
+                            <label for="username">Email</label>
+                            <input type="text" name = 'email' class="form-control" />
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="username">Password</label>
+                            <input type="text" name = 'password' class="form-control" />
+                        </div>             
+                        <div class="action">  
+                            <button class="btn success">Login</button> 
+                        </div>
+                    </form>
+             </div>
+
+        </div>
+    </div>
+</div>

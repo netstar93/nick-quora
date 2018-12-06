@@ -1,0 +1,65 @@
+body {
+  
+}
+.hide{
+  display: none !important;
+}
+.show{
+  display: auto !important;
+}
+button {
+  background-color: transparent;
+  padding: 5px;
+}
+button.success{
+  background-color: darkseagreen;
+}
+button .md{
+  padding: 10px;
+}
+button .lg{
+  padding: 20px;
+}
+.main-container , .container-full{
+  width: 100%;
+}
+.login{
+  position: relative;
+  /* background-color: lightgray; */
+  background: url('/images/nightsky.jpg') no-repeat center; 
+  position: fixed;
+  top: 0;
+  left: 0; 
+  min-height: 100%;
+  color: #000000;
+}
+
+.login .center-page{
+    width: 700px;
+    padding: 20px;
+    height: 400px;
+    background-color: #ffff;
+     position: absolute;
+    /* top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;  */
+     top: 50%;
+    left: 50%;
+    margin-left: -350px;
+    margin-top: -250px; 
+}
+.center-page .title{
+font-size: 50px;
+text-align: center;
+color: red;
+}
+.center-page .subtitle{
+  text-align: center;
+  color: #949494;
+}
+.form-content .form , .form-content .intro{
+  width: 50%;
+  float: left;
+}
