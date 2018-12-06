@@ -1,16 +1,39 @@
 body {
-  
+margin : 0px;
+}
+.main-container {
+    background-color: lightgray;
+}
+.page {
+    min-height: 500px;
+    width: 90%;
+    margin: 0 auto;
+    /*background: url('/images/nightsky.jpg') no-repeat center center fixed;*/
+    /*background-position: center;*/
+
+}
+
+.inline{
+    display: inline-block !important;
+}
+.block{
+    display: block !important;
 }
 .hide{
   display: none !important;
 }
+ul.no-style{
+    list-style: none; padding:10px;margin:0px;
+    display: inline-block;
+}
 .show{
-  display: auto !important;
+  display: block !important;
 }
 button {
   background-color: transparent;
   padding: 5px;
 }
+
 button.success{
   background-color: darkseagreen;
 }
@@ -20,8 +43,60 @@ button .md{
 button .lg{
   padding: 20px;
 }
-.main-container , .container-full{
-  width: 100%;
+.container-full{
+    width: 100%;
+}
+.header *{
+    vertical-align: middle;
+}
+.header, .footer{
+    background-color: darkseagreen;
+    color: white;
+}
+.footer{
+    text-align: center;
+    padding:10px;
+}
+.header .logo{
+    width: 100px;
+    padding: 8px;
+}
+.header ul.nav{
+    list-style: none;
+}
+.header ul.nav li{
+    float:left;
+    margin: 10px;
+    vertical-align: middle;
+}
+.header .search input{
+    background: transparent;
+    color: #ffffff;
+    border: 0px solid green;
+    width: 200px;
+    height: 10px;
+    padding: 10px;
+}
+.header .search input :hover{
+    border: 2px;
+}
+.header .search input :focus{
+    border: 1px solid #ffffff;
+}
+.header .search input::placeholder{
+ color: white;
+    opacity: 1; /* Firefox */
+}
+.nav-wrapper{
+    display:inline-block;
+}
+.header ul.nav a{
+    padding: 10px;
+    text-decoration: none;
+    color: #ffffff;
+}
+.header ul.nav li :hover{
+    background-color: lightseagreen;
 }
 .login{
   position: relative;
@@ -62,4 +137,16 @@ color: red;
 .form-content .form , .form-content .intro{
   width: 50%;
   float: left;
+}
+
+
+/*HOME PAGE*************************************/
+
+.topic-categories ul li {
+    padding: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    background: darkseagreen;
+    margin: 2px;
+    min-width: 160px;
 }
