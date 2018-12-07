@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <% include partials/head.ejs%>
+    <% include ../partials/head.ejs%>
+    <link rel="stylesheet" href="/css/admin-style.css">
 </head>
 
 <body>
 
-<% include partials/header.ejs%>
-
+<% include header.ejs %>
 
 <!-- Insert Body here -->
 <div class="main-container">
         <%- body %>
 </div><!-- /.container -->
-
-<% include partials/footer.ejs%>
-
 </body>
 </html>

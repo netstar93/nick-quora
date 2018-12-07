@@ -10,4 +10,8 @@ router.get('/login', function(req, res, next) {
   res.render('login', { title: 'Quora- Explore Yourself' });
 });
 
+router.get('/topic', function(req, res, next) {
+  res.render('topic', { title: 'Topic - Quora' });
+});
+
 module.exports = router;

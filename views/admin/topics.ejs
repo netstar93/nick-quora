@@ -1,0 +1,27 @@
+<% layout('layout' ) %>
+<!-- <div class="page admin-wrapper">
+    <div class="title text-center">Manage Topics</div>
+    <div class="grid">
+
+    </div>
+</div> -->
+<div class="page admin-wrapper">
+        <div class="title text-center">New Topic</div>
+        <div class="content">
+            <form action="/savetopic" class="form"method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                        <label for="username">Title</label>
+                        <input type="text" name = 'name' class="form-control" />
+                 </div>
+
+                <div class="form-group">
+                    <label for="username">Image</label>
+                    <input type="file" name = 'image' class="form-control" />
+                </div>
+
+                <div class="action">  
+                    <button class="btn success" type="submit">Submit</button> 
+                </div>
+            </form>
+        </div>
+</div>

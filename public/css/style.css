@@ -1,17 +1,24 @@
 body {
 margin : 0px;
+font-family: 'q_serif',Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
 }
 .main-container {
-    background-color: lightgray;
+    background-color: #d3d3d31a;
+    top: 55px;
+    position: relative;
 }
+.text-center{ text-align: center !important; }
 .page {
     min-height: 500px;
     width: 90%;
     margin: 0 auto;
+    padding: 20px;
     /*background: url('/images/nightsky.jpg') no-repeat center center fixed;*/
     /*background-position: center;*/
 
 }
+a{  text-decoration: none;  opacity: 0.9; }
+p{    opacity: 0.85; }
 
 .inline{
     display: inline-block !important;
@@ -56,6 +63,12 @@ button .lg{
 .footer{
     text-align: center;
     padding:10px;
+    clear: both;
+}
+.header{
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
 }
 .header .logo{
     width: 100px;
@@ -87,6 +100,8 @@ button .lg{
  color: white;
     opacity: 1; /* Firefox */
 }
+.header .user-pic{    margin-right: 10px}
+.header .user-pic img{ width: 45px; border-radius: 30px;}
 .nav-wrapper{
     display:inline-block;
 }
@@ -141,7 +156,10 @@ color: red;
 
 
 /*HOME PAGE*************************************/
-
+.topic-categories{
+  width: 20%;
+} 
+.story-box{width: 60%;}
 .topic-categories ul li {
     padding: 10px;
     color: #ffffff;
@@ -149,4 +167,60 @@ color: red;
     background: darkseagreen;
     margin: 2px;
     min-width: 160px;
+}
+
+.topic-categories , .story-box{
+  float:left;
+}
+.entrybox , .story{
+  padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 6px 2px #e2e2e2;
+    border-radius: 10px;
+    background-color: #ffff;
+  /* box-shadow: 0px 0px 14px 0px rgba(0,199,166,0.75); */
+}
+.entrybox textarea{
+  width: 97%;
+  height: 60px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.story .link{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+}
+.story .link a{   
+     color: black;
+    opacity: .9;
+}
+.story .current-user img{
+    max-width: 40px;
+    border-radius: 20px;
+    margin-right:3px;
+}
+.user-desc{ display: none;}
+.story .current-user img:hover  .user-desc { display: block; }
+.story .current-user *{
+    vertical-align: middle;
+}
+.post-time{
+    float: right;
+    color: green;
+}
+
+.story-box .topic-info {
+    content: "";
+  clear: both;
+  display: table;
+  width: 97%;
+} 
+.topic-info .image{
+    width: 130px; float: left; 
+    margin-right:10px;
+}
+.topic-info .name{
+    font-size: 30px;
+    font-weight: 700;
 }

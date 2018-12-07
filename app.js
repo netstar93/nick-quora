@@ -35,6 +35,7 @@ app.use(session({
 
 
 app.use('/', require('./routes/index'));
+app.use('/admin', require('./routes/admin'));
 
 app.use(function (req, res, next) {
   res.locals.success = req.flash('success');
@@ -55,14 +56,14 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+global._log = function(data) {
+    console.log(data);
+}
+
 var server = http.createServer(app)
 reload(app);
 server.listen(app.get('port') , function(){
     console.log('Running on port ' +app.get('port'));
 })
-
-global.log = function(data) {
-    console.log(data);
-}
 
 module.exports = app;
