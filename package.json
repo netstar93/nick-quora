@@ -4,7 +4,7 @@
   "description": "Watch/read/download educational Notes",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon -e js"
+    "start": "nodemon -e ejs,js"
   },
   "author": "",
   "license": "ISC",

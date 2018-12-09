@@ -7,4 +7,13 @@
         <li>Settings</li>
     </ul>
 </div>
+    <% if(messages) %>
+    <div class="messages">
+        <div class="success">
+            <%= messages.success %>
+        </div>
+        <div class="error">
+            <%= messages.error %>
+        </div>
+    </div>
 </div>

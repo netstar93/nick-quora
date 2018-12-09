@@ -33,15 +33,12 @@ app.use(session({
     saveUninitialized: true
 }));
 
-
-app.use('/', require('./routes/index'));
-app.use('/admin', require('./routes/admin'));
-
 app.use(function (req, res, next) {
-  res.locals.success = req.flash('success');
-  res.locals.error = req.flash('error');
-  res.locals.message = req.flash();
-  next();
+    var local = res.locals;
+    local.messages = req.flash();
+    local.messages.success = req.flash('success');
+    local.messages.error = req.flash('error');
+    next();
   //next(createError(404));
 });
 
@@ -56,9 +53,11 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-global._log = function(data) {
+global.log = function(data) {
     console.log(data);
 }
+app.use('/', require('./routes/index'));
+app.use('/admin', require('./routes/admin'));
 
 var server = http.createServer(app)
 reload(app);

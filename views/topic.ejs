@@ -2,31 +2,30 @@
 <div class="page wrapper">
     <div class="topic-categories">
         <ul class="list no-style">
-            <li>Feed</li>
-            <li>Life Advice</li>
-            <li>Career</li>
-            <li>Politics</li>
-            <li>News</li>
+            <li><a href="/">Feeds</a></li>
+            <% topics.forEach(function(topic) { %>
+                <li><a href="/topic/<%= topic._id %>"> <%= topic.title %> </a></li>
+            <% }) %>
         </ul>
     </div>
 
     <div class="story-box">
-
-        <div class="story topic-info">            
+        <div class="story topic-info">
             <div class="image" >
                 <span class="image"><img src="/images/phy.jpg" width="110px" /></span>
             </div>
             <div class="data" style="float: left;">
-                 <div class="name">Topic Name</div>
-                <span class="follower">Follow 14.3m</span>
+                 <div class="name"><%= topic.title %></div>
+                <span class="follower">Follow <%= topic.followers %>m</span>
                 <span class="bookmark">Bookmark</span>
             </div>
         </div>
-        <div class="storylist"> 
+        <div class="storylist">
+            <% topic.stories.forEach(function(story) { %>
             <div class="story">                    
                      <div class="link">
                         <a href="/storylink">
-                            <span>How is it possible that Bollywood actors play positive roles but themselves are so negative and bad?</span>
+                            <span><%= story.title %></span>
                         </a>
                      </div>
                      <div class="current-user question-link">
@@ -38,43 +37,19 @@
                     <div class="answer">
                         <p>My answer will be in Indian contex. When our tv is filled with over drama, over acting, logicless, mythological series, there are some series and programs that are worth watching. Here are some.</p>
                     </div>
-            </div>
-            <div class="story">                    
-                    <div class="link">
-                       <a href="/storylink">
-                           <span>How is it possible that Bollywood actors play positive roles but themselves are so negative and bad?</span>
-                       </a>
-                    </div>
-                    <div class="current-user question-link">
-                            <span class="pic"><img src="https://qph.fs.quoracdn.net/main-thumb-ti-481-100-acombkiunkbnmdobavqyvbndsytivmrg.jpeg" /></span>                        
-                           <span class="name"><a href="/userlink" target="_blank">Nick Dev</a></span>
-                           <span class="intro">PhD Scholar at Indian Institute of Technology</span>
-                           <span class="post-time">Updated Nov 22</span>
-                    </div>
-                   <div class="answer">
-                       <p>My answer will be in Indian contex. When our tv is filled with over drama, over acting, logicless, mythological series, there are some series and programs that are worth watching. Here are some.</p>
-                   </div>
-           </div>
-           <div class="story">                    
-                    <div class="link">
-                    <a href="/storylink">
-                        <span>How is it possible that Bollywood actors play positive roles but themselves are so negative and bad?</span>
-                    </a>
-                    </div>
-                    
-                    <div class="current-user question-link">
-                            <p class="user-desc">
-                                    Only show this when hovering parent
-                            </p>
-                            <span class="pic"><img src="https://qph.fs.quoracdn.net/main-thumb-ti-481-100-acombkiunkbnmdobavqyvbndsytivmrg.jpeg" /></span>                        
-                        <span class="name"><a href="/userlink" target="_blank">Nick Dev</a></span>
-                        <span class="intro">PhD Scholar at Indian Institute of Technology</span>
-                        <span class="post-time">Updated Nov 22</span>
-                    </div>
-                <div class="answer">
-                    <p>My answer will be in Indian contex. When our tv is filled with over drama, over acting, logicless, mythological series, there are some series and programs that are worth watching. Here are some.</p>
+                <div class="actions">
+                        <span class="answer"><i class="fa fa-lg fa-pencil-square-o">Answers</i></span> <span><i class="fa fa-lg fa-wifi">Follow</i></span>
                 </div>
-               </div>
+                <div class="answer-box hide">
+                    <form action="/saveAnswer" method="post">
+                        <input type="hidden" name="story" value="<%= story._id %>" />
+                        <textarea class="answer" name="answer"></textarea>
+                        <button type="submit" style="float: right;">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <% }) %>
+
                
         </div>
 

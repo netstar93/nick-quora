@@ -1,27 +1,36 @@
 <% layout('layout' ) %>
-<!-- <div class="page admin-wrapper">
+ <div class="page admin-wrapper">
     <div class="title text-center">Manage Topics</div>
     <div class="grid">
-
+        <table class="table table-bordered">
+            <% topics.forEach(function (topic) { %>
+            <tr>
+                <td><%= topic.title %></td>
+                <td><button class="success"><a href="/topic?id='<%= topic._id %>' ">Edit</a></button></td>
+            </tr>
+        <% }) %>
+        </table>
     </div>
-</div> -->
-<div class="page admin-wrapper">
-        <div class="title text-center">New Topic</div>
-        <div class="content">
-            <form action="/savetopic" class="form"method="post" enctype="multipart/form-data">
-                <div class="form-group">
-                        <label for="username">Title</label>
-                        <input type="text" name = 'name' class="form-control" />
+
+     <div class="inner-page center pad10 mar-top-10">
+         <div class="title text-center">New Topic</div>
+         <div class="content">
+             <form action="admin/savetopic" class="form"method="post" >
+                 <div class="form-group">
+                     <label for="username">Title</label>
+                     <input type="text" name = 'title' class="form-control" />
                  </div>
 
-                <div class="form-group">
-                    <label for="username">Image</label>
-                    <input type="file" name = 'image' class="form-control" />
-                </div>
+                 <div class="form-group">
+                     <label for="username">Image</label>
+                     <input type="file" name = 'image' class="form-control" />
+                 </div>
 
-                <div class="action">  
-                    <button class="btn success" type="submit">Submit</button> 
-                </div>
-            </form>
-        </div>
+                 <div class="action">
+                     <button class="btn success" type="submit">Submit</button>
+                 </div>
+             </form>
+         </div>
+     </div>
+
 </div>
