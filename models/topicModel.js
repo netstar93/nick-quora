@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var config = require('../env.json');
-let db_url =  config.local.database;
+let db_url =  config.development.database;
 mongoose.connect(db_url,{useNewUrlParser: true});
 var schema = new mongoose.Schema({
     title : String,

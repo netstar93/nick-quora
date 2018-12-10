@@ -3,7 +3,7 @@ var app = express();
 var mongoose = require('mongoose');
 var router = express.Router();
 var config = require('../env.json');
-let db_url =  config.local.database;
+let db_url =  config.development.database;
 
 var storyModel = require('../models/storyModel');
 var topicModel = require('../models/topicModel');

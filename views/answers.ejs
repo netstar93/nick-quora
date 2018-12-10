@@ -1,0 +1,25 @@
+<% layout('layout') -%>
+<div class="page wrapper mid">
+    <div class="answerbox">
+      <div class="story-title"><%= data.title %></div><hr/>
+      <div class="actions">
+            <span class="answer"><i class="fa fa-lg fa-pencil-square-o">Answers</i></span> <span><i class="fa fa-lg fa-wifi">Follow</i></span>
+    </div>
+    <p ><%=data.answers.length %> Answers</p> <hr/>
+      <div class="answer-list martop10">
+            <% data.answers .forEach(function(answer) { %>
+                <div class="current-user question-link">
+                    <span class="user-info">
+                        <span class="pic"><img src="https://qph.fs.quoracdn.net/main-thumb-ti-481-100-acombkiunkbnmdobavqyvbndsytivmrg.jpeg" /></span>
+                        <span class="name"><a href="/userlink" target="_blank">Nick Dev</a></span>
+                        <span class="intro">PhD Scholar at Indian Institute of Technology</span>
+                    </span>
+                        <span class="post-time">Updated Nov 22</span>
+                 </div>                 
+                <p class="content">
+                    <%= answer.content %>
+                </p>
+            <% }) %>
+      </div>
+    </div>
+</div>

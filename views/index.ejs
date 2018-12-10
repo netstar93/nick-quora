@@ -27,17 +27,21 @@
             </div>
         </div>
         <div class="storylist">
-            <% stories.forEach(function(story) { %>
+            <% 
+            stories.forEach(function(story) { 
+                var answer = story.populate('answers').answers;    
+                var lastAnswer  = answer[answer.length - 1];     
+                %>
             <div class="story">                    
                      <div class="link">
-                        <a href="/storylink">
+                        <a href="/story/<%= story._id %>">
                             <span><%= story.title %></span>
                         </a>
                      </div>
                      <div class="current-user question-link">
                             <span class="pic"><img src="https://qph.fs.quoracdn.net/main-thumb-ti-481-100-acombkiunkbnmdobavqyvbndsytivmrg.jpeg" /></span>
                             <span class="name"><a href="/userlink" target="_blank">Nick Dev</a></span>
-                            <span class="intro">PhD Scholar at Indian Institute of Technology</span>
+                            <span class="intro"><% %></span>
                             <span class="post-time">Updated Nov 22</span>
                      </div>
                     <div class="answer">

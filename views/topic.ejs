@@ -24,9 +24,9 @@
             <% topic.stories.forEach(function(story) { %>
             <div class="story">                    
                      <div class="link">
-                        <a href="/storylink">
-                            <span><%= story.title %></span>
-                        </a>
+                            <a href="/story/<%= story._id %>">
+                                <span><%= story.title %></span>
+                            </a>
                      </div>
                      <div class="current-user question-link">
                             <span class="pic"><img src="https://qph.fs.quoracdn.net/main-thumb-ti-481-100-acombkiunkbnmdobavqyvbndsytivmrg.jpeg" /></span>
@@ -43,7 +43,7 @@
                 <div class="answer-box hide">
                     <form action="/saveAnswer" method="post">
                         <input type="hidden" name="story" value="<%= story._id %>" />
-                        <textarea class="answer" name="answer"></textarea>
+                        <textarea class="answer" name="content"></textarea>
                         <button type="submit" style="float: right;">Submit</button>
                     </form>
                 </div>

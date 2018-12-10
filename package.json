@@ -24,12 +24,14 @@
     "http": "0.0.0",
     "mongoose": "^5.3.14",
     "morgan": "^1.9.1",
+    "multer": "^1.4.1",
     "nodemailer": "^4.7.0",
     "nodemon": "^1.18.7",
     "reload": "^2.3.1",
     "request": "^2.88.0",
     "rss-parser": "^3.5.4",
     "session-file-store": "^1.2.0",
+    "sharp": "^0.21.1",
     "web-push": "^3.3.3"
   },
   "devDependencies": {}
